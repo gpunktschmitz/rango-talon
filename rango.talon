@@ -8,6 +8,9 @@ settings():
 click <user.rango_target>:
   user.rango_command_with_target("clickElement", rango_target)
 
+click <user.rango_hint_double>:
+  user.rango_command_with_target("clickElement", rango_hint_double)
+
 # Focus
 focus <user.rango_target>:
   user.rango_command_with_target("focusElement", rango_target)
@@ -190,11 +193,11 @@ custom hints reset: user.rango_command_without_target("resetCustomSelectors")
 # Show and hide hints
 hints refresh: user.rango_command_without_target("refreshHints")
 hints (toggle | switch): user.rango_command_without_target("toggleHints")
-hints on [{user.rango_hints_toggle_levels}]: 
+hints on [{user.rango_hints_toggle_levels}]:
   user.rango_command_without_target("enableHints", rango_hints_toggle_levels or "global")
-hints off [{user.rango_hints_toggle_levels}]: 
+hints off [{user.rango_hints_toggle_levels}]:
   user.rango_command_without_target("disableHints", rango_hints_toggle_levels or "global")
-hints reset {user.rango_hints_toggle_levels}: 
+hints reset {user.rango_hints_toggle_levels}:
   user.rango_command_without_target("resetToggleLevel", rango_hints_toggle_levels)
 toggle show:
   user.rango_command_without_target("displayTogglesStatus")
